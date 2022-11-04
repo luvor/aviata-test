@@ -7,10 +7,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CheckboxInput: typeof import('./src/components/CheckboxInput.vue')['default']
     Counter: typeof import('./src/components/Counter.vue')['default']
     Filter: typeof import('./src/components/Filter.vue')['default']
     FilterComponent: typeof import('./src/components/FilterComponent.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    IcRoundFilterListOff: typeof import('./src/components/icons/IcRoundFilterListOff.vue')['default']
     ResultCard: typeof import('./src/components/ResultCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

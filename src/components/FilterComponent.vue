@@ -37,11 +37,11 @@ const handleOptionsClear = () => {
       <p class="text-xl font-bold p-3">
         {{ props.title }}
       </p>
-      <button class="ml-auto p-3" @click="handleOptionsClear">
+      <button v-show="selected.length > 0" class="ml-auto p-3" @click="handleOptionsClear">
         <IcRoundFilterListOff size="1.4em" />
       </button>
     </div>
-    <div v-if="props.options" class="flex flex-col items-start w-full mb-2">
+    <div v-if="props.options" class="flex flex-col items-start w-full mb-2 max-h-[320px] overflow-scroll scroll-thin">
       <div v-for="opt in options" :key="opt.key" class="flex items-stretch accent-primary select-none w-full hover:bg-[#ebebeb]" @click="handleSelect">
         <input :id="opt.key" class="ml-4 mr-4" type="checkbox" :checked="selected.includes(opt.key)" :value="opt.key">
         <label class="w-full h-full text-start py-2 pr-6" :for="opt.key">{{ opt.value }}</label>
