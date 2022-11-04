@@ -16,6 +16,10 @@ class DataService {
   getAirlines() {
     return promisify(res, 'airlines')
   }
+
+  getFlights() {
+    return promisify(res, 'flights')
+  }
 }
 
 export default new DataService()
