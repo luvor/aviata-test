@@ -10,7 +10,16 @@
 - Роутер здесь локальный по файлам
 - Components auto import
 
+### Launch
+```bash
+yarn install
+yarn dev
+```
+
 <br>
+
+<center><img src="https://user-images.githubusercontent.com/86249418/200179080-41665195-6e0f-4a6a-bbd1-6fb461f195de.png" /></center>
+
 <br>
 
 <h2>
