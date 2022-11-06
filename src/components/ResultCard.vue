@@ -92,7 +92,7 @@ const returnFlightStops = (segments: FlightSegment[]) => {
         </p>
       </div>
     </div>
-    <div class="w-full ml-auto rounded-r-md bg-[#f5f5f5] whitespace-nowrap flex flex-col items-center p-6 gap-3">
+    <div class="w-full ml-auto rounded-b-md md:rounded-r-md md:rounded-l-0 bg-[#f5f5f5] whitespace-nowrap flex flex-col items-center p-6 gap-3">
       <h3 class="text-xl">
         <span class="text-3xl">{{ props.flight.price }}</span> {{ currencyToSymbol(props.flight.currency) }}
       </h3>

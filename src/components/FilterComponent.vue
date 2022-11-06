@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Ref } from 'vue'
-import { defineProps, ref } from 'vue'
+// import type { Ref } from 'vue'
+import { defineProps } from 'vue'
 
 const props = defineProps({
   title: {
@@ -11,23 +11,32 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  selected: {
+    type: Array as () => string[],
+    required: true,
+  },
 })
 
-const emits = defineEmits(['selected'])
+const emits = defineEmits(['update:selected'])
 
-const selected: Ref<string[]> = ref([])
+// const selected: Ref<string[]> = ref(props.selected)
 
 const handleSelect = (event: any) => {
-  if (event.target.checked)
-    selected.value.push(event.target.value)
-  else
-    selected.value = selected.value.filter((item: any) => item !== event.target.value)
-
-  emits('selected', selected.value)
+  if (event.target.checked) {
+    if (event.target.value === 'all')
+      emits('update:selected', props.options.map((option: any) => option.key))
+    else
+      emits('update:selected', [...props.selected, event.target.value])
+  }
+  else {
+    if (event.target.value === 'all')
+      emits('update:selected', [])
+    else
+      emits('update:selected', props.selected.filter((item: string) => item !== event.target.value || item === 'all'))
+  }
 }
 const handleOptionsClear = () => {
-  selected.value = []
-  emits('selected', selected.value)
+  emits('update:selected', [])
 }
 </script>
 
@@ -49,11 +58,16 @@ const handleOptionsClear = () => {
         />
       </div>
     </div>
-    <div v-if="props.options" class="flex flex-col items-start w-full mb-2 max-h-[320px] overflow-scroll scroll-thin">
+    <div v-if="props.options.length > 0" class="flex flex-col items-start w-full mb-2 max-h-[320px] overflow-scroll scroll-thin">
       <div v-for="opt in options" :key="opt.key" class="flex items-center select-none w-full hover:bg-[#ebebeb] px-3" @click="handleSelect">
         <input :id="opt.key" class="primary-checkbox" type="checkbox" :checked="selected.includes(opt.key)" :value="opt.key">
-        <label class="w-full ml-2 h-full text-start py-2 pr-6" :for="opt.key">{{ opt.value }}</label>
+        <label class="w-full pl-2 h-full text-start py-2 pr-6 whitespace-nowrap" :for="opt.key">{{ opt.value }}</label>
       </div>
+    </div>
+    <div v-else>
+      <p class="text-center text-gray-400 py-2">
+        Нет данных
+      </p>
     </div>
   </div>
 </template>

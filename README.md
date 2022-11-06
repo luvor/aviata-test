@@ -1,21 +1,22 @@
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/111864893-a457fd00-899e-11eb-9f05-f4b88987541d.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
-</p>
+## Test task for Aviata
+### Implemented
+- Соответствие дизайну [+]
+- Работа фильтров [-+] (фильтр по опциям тарифа работает только baggageOnly)
+- Реализация адаптивной верстки [+]
+- Использование оптимальных подходов при написании кода [+]
 
-<h6 align='center'>
-<a href="https://vitesse-lite.netlify.app/">Live Demo</a>
-</h6>
-
-<h5 align='center'>
-<b>Lightweight version of <a href="https://github.com/antfu/vitesse">Vitesse</a></b>
-</h5>
+### P.S.
+- Вместо tailwindcss использовал unoCSS, впринципе они взаимозаменяемы, но unoCSS просто удобнее (я использовал так чтобы можно было поменять на tailwindcss)
+- Роутер здесь локальный по файлам
+- Components auto import
 
 <br>
+<br>
 
-<p align='center'>
-<b>English</b> | <a href="https://github.com/antfu/vitesse-lite/blob/main/README.zh-CN.md">简体中文</a>
-<!-- Contributors: Thanks for geting interested, however we DON'T accept new transitions to the README, thanks. -->
-</p>
+<h2>
+Based on Vue template
+<a href="https://vitesse-lite.netlify.app/">Vitesse Lite</a>
+</h2>
 
 ## Features
 
@@ -38,19 +39,6 @@
 - ☁️ Deploy on Netlify, zero-config
 
 
-<br>
-
-See [Vitesse](https://github.com/antfu/vitesse) for full featureset.
-
-
-## Dropped Features from [Vitesse](https://github.com/antfu/vitesse)
-
-- ~~i18n~~
-- ~~Layouts~~
-- ~~SSG~~
-- ~~PWA~~
-- ~~Markdown~~
-
 ## Pre-packed
 
 ### UI Frameworks
@@ -69,8 +57,6 @@ See [Vitesse](https://github.com/antfu/vitesse) for full featureset.
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use Vue Composition API and others without importing
 - [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - components auto import
 - [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
-
-## Try it now!
 
 ### GitHub Template
 
