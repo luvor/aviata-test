@@ -7,14 +7,20 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ActionButton: typeof import('./src/components/ActionButton.vue')['default']
     CheckboxInput: typeof import('./src/components/CheckboxInput.vue')['default']
     Counter: typeof import('./src/components/Counter.vue')['default']
+    DashedLink: typeof import('./src/components/DashedLink.vue')['default']
     Filter: typeof import('./src/components/Filter.vue')['default']
     FilterComponent: typeof import('./src/components/FilterComponent.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    IcBaselinePlus: typeof import('./src/components/icons/IcBaselinePlus.vue')['default']
     IcRoundFilterListOff: typeof import('./src/components/icons/IcRoundFilterListOff.vue')['default']
+    MdiRestartOff: typeof import('./src/components/icons/MdiRestartOff.vue')['default']
     ResultCard: typeof import('./src/components/ResultCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SecondaryButton: typeof import('./src/components/SecondaryButton.vue')['default']
+    StopsTimeline: typeof import('./src/components/StopsTimeline.vue')['default']
   }
 }
