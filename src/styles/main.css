@@ -10,8 +10,18 @@ html.dark {
   background: #121212;
 }
 
-input[type="checkbox"]:checked {
-  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' width='1.2em' height='1.2em' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='%23fff' d='M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+.primary-checkbox{
+  appearance: none;
+  width: 17px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: 2px solid #b9b9b9;
+}
+.primary-checkbox:checked {
+  background-image: url("data:image/svg+xml;utf8,%3Csvg width='11px' height='11px' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_8810_408)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.95452 2.1527L3.24992 7.44537L0 4.19545L1.41421 2.78123L3.16429 4.53131L6.4597 0.823975L7.95452 2.1527Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_8810_408'%3E%3Crect width='8' height='8' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-color: #55BB06;
+	border-color:#55BB06;
 }
 
 .scroll-thin {

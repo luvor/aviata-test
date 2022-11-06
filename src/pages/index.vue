@@ -16,7 +16,7 @@ const rateOptions = [
   { key: 'returnableOnly', value: 'Только с возратом' },
 ]
 
-const airlinesSelected: Ref<string[]> = ref([])
+const airlinesSelected: Ref<string[]> = ref(['all'])
 const rateOptionsSelected: Ref<string[]> = ref([])
 
 const handleSelectedAirlines = (selected: string[]) => {
@@ -43,7 +43,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="bg-[#e1e1e1] grid place-items-center font-sans">
+  <div class="bg-[#e1e1e1] grid place-items-center font-sans py-10">
     <div v-if="airlines" class="max-w-screen-2xl flex flex-col md:flex-row px-10">
       <div class="flex flex-col">
         <FilterComponent title="Опции тарифа" :options="rateOptions" @selected="handleRateOptions" />
